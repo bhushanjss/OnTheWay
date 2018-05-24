@@ -11,6 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
+import Vehicle from './Vehicle.js';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -23,34 +24,36 @@ type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to On The Way
-        </Text>
-        <Text style={styles.instructions}>
-          Where would you like to Go?
-        </Text>
+      <View style={styles.mainContainer}>
+        <View style={styles.welcomeContainer}>
+          <Text style={styles.welcome}>
+            On The Highway
+          </Text>  
+        </View>              
+        <Vehicle />
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  mainContainer: {
     flex: 1,
     justifyContent: 'flex-start',
-    alignItems: 'center',
     backgroundColor: '#f7f7f7',
-    marginTop: 50,
+    marginTop: 30,
+  },
+  welcomeContainer: {
+    alignItems: 'center',
+    backgroundColor: '#FFF',
+    shadowColor: '#00A',
+    shadowOffset: {width: 1, height: 2},
+    shadowOpacity: 0.2,
+    marginBottom: 10
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+    margin: 10
   },
 });
