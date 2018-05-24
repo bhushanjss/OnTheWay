@@ -16,9 +16,9 @@ class Vehicle extends Component {
 			currentGasonlineLeft : 0,
 			lables: {
 				instructions: 'Your Vehicle Information',
-				mpg: "How many miles per gallon?",
-				tankSize: "How much is the Tank Size (gallons)?",
-				currentGasonlineLeft: "How much current gasoline or distance left?"
+				mpg: "How many miles per gallon ?",
+				tankSize: "How much is the Tank Size (gallons) ?",
+				currentGasonlineLeft: "How much current gasoline or distance left ?"
 			}
 		}
 	}
@@ -46,7 +46,7 @@ class Vehicle extends Component {
 					style={styles.inputs}
 					placeholder="Tank Size"
 					keyboardType="numeric"
-					onChangeText={(text) => this.setState( {...this.state, mpg: text})}
+					onChangeText={(text) => this.setState( {...this.state, tankSize: text})}
 					/>
     		</View>
     		<View style={styles.separator}>
@@ -55,7 +55,7 @@ class Vehicle extends Component {
 					style={styles.inputs}
 					placeholder="Gasoline or Miles"
 					keyboardType="numeric"
-					onChangeText={(text) => this.setState( {...this.state, mpg: text})}
+					onChangeText={(text) => this.setState( {...this.state, tankSize: text})}
 					/>
     		</View>			
 			</View>
