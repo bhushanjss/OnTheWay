@@ -12,6 +12,7 @@ import {
   View
 } from 'react-native';
 import Vehicle from './Vehicle.js';
+//import MapView from 'react-native-maps';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -29,7 +30,7 @@ export default class App extends Component<Props> {
           <Text style={styles.welcome}>
             On The Highway
           </Text>  
-        </View>              
+        </View>  
         <Vehicle />
       </View>
     );
