@@ -6,31 +6,23 @@
 
 import React, { Component } from 'react';
 import {
-  Platform,
   StyleSheet,
   Text,
   View
 } from 'react-native';
 import Vehicle from './Vehicle.js';
-//import MapView from 'react-native-maps';
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+// import MapMain from './MapMain.js';
 
 type Props = {};
-export default class App extends Component<Props> {
+class App extends Component<Props> {
   render() {
     return (
       <View style={styles.mainContainer}>
         <View style={styles.welcomeContainer}>
           <Text style={styles.welcome}>
             On The Highway
-          </Text>  
-        </View>  
+          </Text>
+        </View>
         <Vehicle />
       </View>
     );
@@ -48,7 +40,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#FFF',
     shadowColor: '#00A',
-    shadowOffset: {width: 1, height: 2},
+    shadowOffset: { width: 1, height: 2 },
     shadowOpacity: 0.2,
     marginBottom: 10
   },
@@ -58,3 +50,5 @@ const styles = StyleSheet.create({
     margin: 10
   },
 });
+
+export default App;
